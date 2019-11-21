@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Stevia
 
 class RootViewController: UIViewController {
 
@@ -14,25 +15,16 @@ class RootViewController: UIViewController {
         super.viewDidLoad()
         commonInit()
     }
-    
     private func commonInit() {
         subviews()
         layout()
         theme()
     }
-    
     private func subviews() {
-        
     }
-    
     private func layout() {
-        
     }
-    
     private func theme() {
         self.view.backgroundColor = .brown
     }
-    
-    
 }
-
