@@ -62,7 +62,13 @@ class RootViewController: UIViewController {
         brandImageLogo.image = image
     }
     @objc func handleTouchStudentProfile( ) {
+        let studentVC = StudentLoginViewControler()
+        studentVC.modalPresentationStyle = .fullScreen
+        present(studentVC, animated: true)
     }
     @objc func handleTouchTeacherProfiler( ) {
+        let teacherVC = TeacherLoginViewControler()
+        teacherVC.modalPresentationStyle = .fullScreen
+        present(teacherVC, animated: true)
     }
 }

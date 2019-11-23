@@ -1,9 +1,29 @@
 //
-//  StudentLoginViewController.swift
+//  ViewController.swift
 //  Course System Manager
 //
-//  Created by Robson James Junior on 23/11/19.
+//  Created by Robson James Junior on 21/11/19.
 //  Copyright © 2019 DilzanaKeise. All rights reserved.
 //
 
-import Foundation
+import UIKit
+import Stevia
+
+class StudentLoginViewControler: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        commonInit()
+    }
+    private func commonInit() {
+        subviews()
+        layout()
+        theme()
+    }
+    private func subviews() {
+    }
+    private func layout() {
+    }
+    private func theme() {
+        view.backgroundColor = .red
+    }
+}
