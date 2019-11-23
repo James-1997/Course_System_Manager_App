@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4F3CFC2389C5D700848ED2 /* GeneralStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3CFB2389C5D700848ED2 /* GeneralStyleKit.swift */; };
+		1D4F3CFF2389C69C00848ED2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3CFE2389C69C00848ED2 /* UIColor.swift */; };
+		1D4F3D042389D26C00848ED2 /* StudentLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D032389D26C00848ED2 /* StudentLoginViewController.swift */; };
+		1D4F3D062389D28000848ED2 /* TeacherLoginViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D052389D28000848ED2 /* TeacherLoginViewControler.swift */; };
 		1D72FEAE23864A8D000FDF7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72FEAD23864A8D000FDF7B /* AppDelegate.swift */; };
 		1D72FEB023864A8D000FDF7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72FEAF23864A8D000FDF7B /* SceneDelegate.swift */; };
 		1D72FEB223864A8D000FDF7B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72FEB123864A8D000FDF7B /* RootViewController.swift */; };
@@ -18,6 +22,10 @@
 
 /* Begin PBXFileReference section */
 		0A48CCA98618A88A1CD9FAD0 /* Pods-Course System Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Course System Manager.release.xcconfig"; path = "Target Support Files/Pods-Course System Manager/Pods-Course System Manager.release.xcconfig"; sourceTree = "<group>"; };
+		1D4F3CFB2389C5D700848ED2 /* GeneralStyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralStyleKit.swift; sourceTree = "<group>"; };
+		1D4F3CFE2389C69C00848ED2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		1D4F3D032389D26C00848ED2 /* StudentLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLoginViewController.swift; sourceTree = "<group>"; };
+		1D4F3D052389D28000848ED2 /* TeacherLoginViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherLoginViewControler.swift; sourceTree = "<group>"; };
 		1D72FEAA23864A8D000FDF7B /* Course System Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Course System Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D72FEAD23864A8D000FDF7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D72FEAF23864A8D000FDF7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +50,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D4F3CFD2389C68B00848ED2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1D4F3CFE2389C69C00848ED2 /* UIColor.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1D4F3D002389C72A00848ED2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1D4F3CFB2389C5D700848ED2 /* GeneralStyleKit.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1D4F3D012389C73A00848ED2 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				1D72FEAD23864A8D000FDF7B /* AppDelegate.swift */,
+				1D72FEAF23864A8D000FDF7B /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		1D4F3D022389C74400848ED2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D72FEB123864A8D000FDF7B /* RootViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		1D72FEA123864A8C000FDF7B = {
 			isa = PBXGroup;
 			children = (
@@ -76,6 +117,7 @@
 		1D72FEC423864B2C000FDF7B /* Student */ = {
 			isa = PBXGroup;
 			children = (
+				1D4F3D032389D26C00848ED2 /* StudentLoginViewController.swift */,
 			);
 			path = Student;
 			sourceTree = "<group>";
@@ -83,6 +125,7 @@
 		1D72FEC523864B39000FDF7B /* Teacher */ = {
 			isa = PBXGroup;
 			children = (
+				1D4F3D052389D28000848ED2 /* TeacherLoginViewControler.swift */,
 			);
 			path = Teacher;
 			sourceTree = "<group>";
@@ -90,9 +133,10 @@
 		1D72FEC623864B73000FDF7B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				1D72FEB123864A8D000FDF7B /* RootViewController.swift */,
-				1D72FEAD23864A8D000FDF7B /* AppDelegate.swift */,
-				1D72FEAF23864A8D000FDF7B /* SceneDelegate.swift */,
+				1D4F3D022389C74400848ED2 /* Controllers */,
+				1D4F3D012389C73A00848ED2 /* Delegates */,
+				1D4F3D002389C72A00848ED2 /* UI */,
+				1D4F3CFD2389C68B00848ED2 /* Extensions */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -256,9 +300,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D72FEB223864A8D000FDF7B /* RootViewController.swift in Sources */,
+				1D4F3CFF2389C69C00848ED2 /* UIColor.swift in Sources */,
+				1D4F3D062389D28000848ED2 /* TeacherLoginViewControler.swift in Sources */,
 				1D72FEB823864A8D000FDF7B /* Course_System_Manager.xcdatamodeld in Sources */,
 				1D72FEAE23864A8D000FDF7B /* AppDelegate.swift in Sources */,
+				1D4F3D042389D26C00848ED2 /* StudentLoginViewController.swift in Sources */,
 				1D72FEB023864A8D000FDF7B /* SceneDelegate.swift in Sources */,
+				1D4F3CFC2389C5D700848ED2 /* GeneralStyleKit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,8 +15,9 @@ included: # paths to include during linting. `--path` is ignored if present.
 excluded: # paths to ignore during linting. Takes precedence over `included`.
   - Carthage
   - Pods
-  - Course System Manager/Utilities/SceneDelegate.swift
-  - Course System Manager/Utilities/AppDelegate.swift
+  - Course System Manager/Utilities/Delegates/SceneDelegate.swift
+  - Course System Manager/Utilities/Delegates/AppDelegate.swift
+  - Course System Manager/Utilities/Extensions/UIColor.swift
   - Source/ExcludedFolder
   - Source/ExcludedFile.swift
   - Source/*/ExcludedFile.swift # Exclude files with a wildcard
