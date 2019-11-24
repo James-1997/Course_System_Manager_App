@@ -9,14 +9,16 @@
 import UIKit
 import Stevia
 
-class TeacherLoginViewControler: UIViewController {
+class StudentLoginViewControler: UIViewController {
     private let emailTextField = UITextField()
     private let passWordTextField = UITextField()
     private let brandImageLogo = UIImageView()
     private let logInButton = UIButton(type: .system)
+    private var studentMenager = StudentManager.self
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
+        addObservers()
     }
     private func commonInit() {
         subviews()
@@ -66,6 +68,7 @@ class TeacherLoginViewControler: UIViewController {
         passWordTextField.textAlignment = .left
         passWordTextField.textColor = GeneralSK.Colors.subtitlesColor
         passWordTextField.placeholder = GeneralSK.Texts.passWordTextFieldPlaceHolder
+        passWordTextField.isSecureTextEntry = true
         logInButton.backgroundColor = GeneralSK.Colors.buttonColor
         logInButton.setTitle(GeneralSK.Texts.logInText, for: .normal)
         logInButton.setTitleColor(GeneralSK.Colors.tintTilteColor, for: .normal)
@@ -96,6 +99,56 @@ class TeacherLoginViewControler: UIViewController {
         self.view.endEditing(true)
     }
     @objc func handleLogInToShow () {
-        print("pegou")
+        guard let email = emailTextField.text else {
+            dontHaveEmailText()
+            return
+        }
+        if email == "" {
+            dontHaveEmailText()
+            return
+        }
+        guard let password = passWordTextField.text else {
+            dontHavePasswordText()
+            return
+        }
+        if password == "" {
+            dontHavePasswordText()
+            return
+        }
+        studentMenager.shared.getStudent(email: email, password: password)
+    }
+    func dontHaveEmailText() {
+        self.showAlert(title: GeneralSK.Texts.dontCompletEmail,
+                                  message: GeneralSK.Texts.incompletEmailMessage,
+                                  buttonTitle: GeneralSK.Texts.confirmButtonText,
+                                  style: .default)
+    }
+    func dontHavePasswordText() {
+        self.showAlert(title:  GeneralSK.Texts.dontCompletPassword,
+                       message: GeneralSK.Texts.incompletPasswordMessage,
+                       buttonTitle: GeneralSK.Texts.confirmButtonText,
+                       style: .default)
+    }
+    private func addObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(presentStudentData),
+                                               name: .studentChaged,
+                                               object: nil)
+    }
+    @objc func presentStudentData() {
+        guard let student = studentMenager.shared.student else {
+            self.showAlert(title: GeneralSK.Texts.errorTitle,
+                           message: GeneralSK.Texts.errorTryAgainTitleText,
+                           buttonTitle: GeneralSK.Texts.confirmButtonText,
+                           style: .default)
+            return
+        }
+        DispatchQueue.main.async {
+            self.showAlert(title: GeneralSK.Texts.logInSuccededTitle,
+                           message: String(format: GeneralSK.Texts.templateMessageSuccedLogin,
+                                           student.email,
+                                           student.password),
+                           buttonTitle: GeneralSK.Texts.confirmButtonText,
+                           style: .default)
+        }
     }
 }
