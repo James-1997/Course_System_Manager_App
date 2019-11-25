@@ -13,6 +13,7 @@ class RootViewController: UIViewController {
     private let studentSelectButton = UIButton(type: .system)
     private let teacherSelectButton = UIButton(type: .system)
     private let brandImageLogo = UIImageView()
+    private let infoLabel = UILabel()
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
@@ -26,6 +27,7 @@ class RootViewController: UIViewController {
         view.sv(teacherSelectButton)
         view.sv(studentSelectButton)
         view.sv(brandImageLogo)
+        view.sv(infoLabel)
     }
     private func layout() {
         teacherSelectButton.centerHorizontally()
@@ -39,16 +41,23 @@ class RootViewController: UIViewController {
         brandImageLogo.centerHorizontally()
         brandImageLogo.Top == view.safeAreaLayoutGuide.Top + GeneralSK.Sizes.brandMarginToTop
         brandImageLogo.size(GeneralSK.Sizes.brandSize)
+        infoLabel.Bottom == studentSelectButton.Top - GeneralSK.Sizes.infoLabelTopDistance
+        infoLabel.Left == GeneralSK.Sizes.infoLabelLeftMargin
     }
     private func theme() {
         view.backgroundColor = GeneralSK.Colors.backGroundLoginColor
         studentSelectButton.backgroundColor = GeneralSK.Colors.buttonColor
+        infoLabel.text = GeneralSK.Texts.infoLabelText
+        infoLabel.font = GeneralSK.Font.generalSubtitle
+        infoLabel.textColor = GeneralSK.Colors.subtitlesColor
     studentSelectButton.setTitle(GeneralSK.Texts.buttonStudentText, for: .normal)
+        studentSelectButton.titleLabel?.font = GeneralSK.Font.generalSubtitle
     studentSelectButton.setTitleColor(GeneralSK.Colors.tintTilteColor, for: .normal)
         studentSelectButton.clipsToBounds = true
         studentSelectButton.layer.cornerRadius = GeneralSK.Sizes.buttonCornerRadius
         teacherSelectButton.backgroundColor = GeneralSK.Colors.buttonColor
     teacherSelectButton.setTitle(GeneralSK.Texts.buttonTeacherText, for: .normal)
+        teacherSelectButton.titleLabel?.font = GeneralSK.Font.generalSubtitle
     teacherSelectButton.setTitleColor(GeneralSK.Colors.tintTilteColor, for: .normal)
         teacherSelectButton.clipsToBounds = true
         teacherSelectButton.layer.cornerRadius = GeneralSK.Sizes.buttonCornerRadius

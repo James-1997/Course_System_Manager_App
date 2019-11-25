@@ -31,6 +31,9 @@ struct GeneralSK {
         static let cornerRadiusTextField: CGFloat = 10
         static let borderWidthTextField: CGFloat = 1
         static let spacingBettwenTFandBt: CGFloat = 56
+        static let infoLabelLeftMargin: CGFloat = 50
+        static let infoLabelTopDistance: CGFloat = 16
+
     }
     struct Texts {
         static let titleToActionText: String = "Selecione seu perfil:"
@@ -53,5 +56,9 @@ struct GeneralSK {
         static let dontCompletPassword: String = "Senha não preenchida!"
         static let incompletPasswordMessage: String = "preencha o campo com a sua senha completa."
         static let incompletEmailMessage: String = "preencha o campo com o seu email correto."
+        static let infoLabelText: String = "Selecione o seu perfil:"
+    }
+    struct Font {
+        static let generalSubtitle = UIFont(name: "Lato-Bold", size: 24)
     }
 }
