@@ -81,11 +81,13 @@ class RestUtils {
                        let teacher = try JSONDecoder().decode(Teacher.self, from: data)
                        completionHandler(teacher)
                    } catch let jsonError {
-                       print("Error 1: \(jsonError.localizedDescription)")
-                       completionHandler(nil)
+                        print("Error: \(jsonError.localizedDescription)")
+                        NotificationCenter.default.post(name: .teacherError, object: nil )
+                        completionHandler(nil)
                    }
                } else if let error = error {
-                   print("Error 2: \(error.localizedDescription)")
+                    print("Error: \(error.localizedDescription)")
+                    NotificationCenter.default.post(name: .teacherError, object: nil )
                    completionHandler(nil)
                }
            }
@@ -103,12 +105,14 @@ class RestUtils {
                        let student = try JSONDecoder().decode(Student.self, from: data)
                        completionHandler(student)
                    } catch let jsonError {
-                       print("Error 3: \(jsonError.localizedDescription)")
-                       completionHandler(nil)
+                        print("Error: \(jsonError.localizedDescription)")
+                        NotificationCenter.default.post(name: .studentError, object: nil )
+                        completionHandler(nil)
                    }
                } else if let error = error {
-                   print("Error 4: \(error.localizedDescription)")
-                   completionHandler(nil)
+                    print("Error: \(error.localizedDescription)")
+                    NotificationCenter.default.post(name: .studentError, object: nil )
+                    completionHandler(nil)
                }
            }
        }

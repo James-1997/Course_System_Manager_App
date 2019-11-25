@@ -57,6 +57,8 @@ struct GeneralSK {
         static let incompletPasswordMessage: String = "preencha o campo com a sua senha completa."
         static let incompletEmailMessage: String = "preencha o campo com o seu email correto."
         static let infoLabelText: String = "Selecione o seu perfil:"
+        static let errorLoginTitle: String = "Erro no Login"
+        static let errorLoginMessage: String = "Houve um erro no seu login, tente novamente! \n Reveja os dados e sua conexão internet!"
     }
     struct Font {
         static let generalSubtitle = UIFont(name: "Lato-Bold", size: 24)

@@ -11,4 +11,6 @@ import Foundation
 extension Notification.Name {
     static let teacherChaged = Notification.Name("teacherChaged")
     static let studentChaged = Notification.Name("studentChaged")
+    static let studentError = Notification.Name("studentError")
+    static let teacherError = Notification.Name("teacherError")
 }
