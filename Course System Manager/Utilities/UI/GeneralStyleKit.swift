@@ -59,6 +59,8 @@ struct GeneralSK {
         static let infoLabelText: String = "Selecione o seu perfil:"
         static let errorLoginTitle: String = "Erro no Login"
         static let errorLoginMessage: String = "Houve um erro no seu login, tente novamente! \n Reveja os dados e sua conexão internet!"
+        static let characterTitle: String = "Quantidade de caracteres fora dos limites!"
+        static let characterMessage: String = "O máximo de caracteres é 30 e mínimo 8"
     }
     struct Font {
         static let generalSubtitle = UIFont(name: "Lato-Bold", size: 24)

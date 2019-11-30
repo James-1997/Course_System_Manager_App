@@ -14,7 +14,8 @@ class StudentLoginViewControler: UIViewController {
     private let passWordTextField = UITextField()
     private let brandImageLogo = UIImageView()
     private let logInButton = UIButton(type: .system)
-    private var studentMenager = StudentManager.self
+    private var studentMenager = StudentManager.shared
+    private let spinner = SpinnerViewController.shared
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
@@ -139,6 +140,9 @@ class StudentLoginViewControler: UIViewController {
             dontHaveEmailText()
             return
         }
+        if email.count > 30 || email.count < 8 {
+            characterUnlimite()
+        }
         guard let password = passWordTextField.text else {
             dontHavePasswordText()
             return
@@ -147,7 +151,11 @@ class StudentLoginViewControler: UIViewController {
             dontHavePasswordText()
             return
         }
-        studentMenager.shared.getStudent(email: email, password: password)
+        if password.count > 30 || password.count < 8 {
+            characterUnlimite()
+        }
+        studentMenager.getStudent(email: email, password: password)
+        createSpinnerView()
     }
     func dontHaveEmailText() {
         self.showAlert(title: GeneralSK.Texts.dontCompletEmail,
@@ -171,8 +179,22 @@ class StudentLoginViewControler: UIViewController {
                                                name: .studentError,
                                                object: nil)
     }
+    func createSpinnerView() {
+        addChild(spinner)
+        spinner.view.frame = view.frame
+        view.addSubview(spinner.view)
+        spinner.didMove(toParent: self)
+    }
+    func destroySpinner () {
+        DispatchQueue.main.async() {
+            self.spinner.willMove(toParent: nil)
+            self.spinner.view.removeFromSuperview()
+            self.spinner.removeFromParent()
+        }
+    }
     @objc func presentStudentData() {
-        guard let student = studentMenager.shared.student else {
+        destroySpinner()
+        guard let student = studentMenager.student else {
             self.showAlert(title: GeneralSK.Texts.errorTitle,
                            message: GeneralSK.Texts.errorTryAgainTitleText,
                            buttonTitle: GeneralSK.Texts.confirmButtonText,
@@ -189,11 +211,18 @@ class StudentLoginViewControler: UIViewController {
         }
     }
     @objc func studentErrorLogIn() {
+        destroySpinner()
         DispatchQueue.main.async {
             self.showAlert(title: GeneralSK.Texts.errorLoginTitle,
                            message: GeneralSK.Texts.errorLoginMessage,
                            buttonTitle: GeneralSK.Texts.confirmButtonText,
                            style: .default)
         }
+    }
+    func characterUnlimite() {
+        self.showAlert(title: GeneralSK.Texts.characterTitle,
+                       message: GeneralSK.Texts.characterMessage,
+                       buttonTitle: GeneralSK.Texts.confirmButtonText,
+                       style: .default)
     }
 }

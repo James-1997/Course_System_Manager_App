@@ -14,7 +14,8 @@ class TeacherLoginViewControler: UIViewController {
     private let passWordTextField = UITextField()
     private let brandImageLogo = UIImageView()
     private let logInButton = UIButton(type: .system)
-    private var teacherMenager = TeacherManager.self
+    private var teacherMenager = TeacherManager.shared
+    private let spinner = SpinnerViewController.shared
     override func viewDidLoad() {
         super.viewDidLoad()
         commonInit()
@@ -122,6 +123,19 @@ class TeacherLoginViewControler: UIViewController {
                                                           action: #selector(viewTapped(gestureRecognizer:)))
         self.view.addGestureRecognizer(tapGestureRecoginzer)
     }
+    func createSpinnerView() {
+        addChild(spinner)
+        spinner.view.frame = view.frame
+        view.addSubview(spinner.view)
+        spinner.didMove(toParent: self)
+    }
+    func destroySpinner () {
+        DispatchQueue.main.async ( ) {
+            self.spinner.willMove(toParent: nil)
+            self.spinner.view.removeFromSuperview()
+            self.spinner.removeFromParent()
+        }
+    }
     @objc
     private func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
         self.view.endEditing(true)
@@ -139,6 +153,9 @@ class TeacherLoginViewControler: UIViewController {
             dontHaveEmailText()
             return
         }
+        if email.count > 30 || email.count < 8{
+            characterUnlimite()
+        }
         guard let password = passWordTextField.text else {
             dontHavePasswordText()
             return
@@ -147,7 +164,11 @@ class TeacherLoginViewControler: UIViewController {
             dontHavePasswordText()
             return
         }
-        teacherMenager.shared.getTeacher(email: email, password: password)
+        if password.count > 30 || password.count < 8{
+            characterUnlimite()
+        }
+        teacherMenager.getTeacher(email: email, password: password)
+        createSpinnerView()
     }
     func dontHaveEmailText() {
         self.showAlert(title: GeneralSK.Texts.dontCompletEmail,
@@ -172,7 +193,8 @@ class TeacherLoginViewControler: UIViewController {
         object: nil)
     }
     @objc func presentTeacherData() {
-        guard let teacher = teacherMenager.shared.teacher else {
+        destroySpinner()
+        guard let teacher = teacherMenager.teacher else {
             self.showAlert(title: GeneralSK.Texts.errorTitle,
                            message: GeneralSK.Texts.errorTryAgainTitleText,
                            buttonTitle: GeneralSK.Texts.confirmButtonText,
@@ -189,11 +211,18 @@ class TeacherLoginViewControler: UIViewController {
         }
     }
     @objc func teacherErrorLogIn() {
+        destroySpinner()
         DispatchQueue.main.async {
             self.showAlert(title: GeneralSK.Texts.errorLoginTitle,
                                       message: GeneralSK.Texts.errorLoginMessage,
                                       buttonTitle: GeneralSK.Texts.confirmButtonText,
                                       style: .default)
         }
+    }
+    func characterUnlimite() {
+        self.showAlert(title: GeneralSK.Texts.characterTitle,
+                       message: GeneralSK.Texts.characterMessage,
+                       buttonTitle: GeneralSK.Texts.confirmButtonText,
+                       style: .default)
     }
 }
