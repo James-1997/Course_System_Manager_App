@@ -65,7 +65,7 @@
 		1D7172E9238B7FAB008CDD17 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
 		1D7172EA238B7FAB008CDD17 /* Lato-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-RegularItalic.ttf"; sourceTree = "<group>"; };
 		1D7172EB238B7FAB008CDD17 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
-		1D72FEAA23864A8D000FDF7B /* Course System Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Course System Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D72FEAA23864A8D000FDF7B /* CMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D72FEAD23864A8D000FDF7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D72FEAF23864A8D000FDF7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1D72FEB123864A8D000FDF7B /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -200,7 +200,7 @@
 		1D72FEAB23864A8D000FDF7B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D72FEAA23864A8D000FDF7B /* Course System Manager.app */,
+				1D72FEAA23864A8D000FDF7B /* CMS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 			);
 			name = "Course System Manager";
 			productName = "Course System Manager";
-			productReference = 1D72FEAA23864A8D000FDF7B /* Course System Manager.app */;
+			productReference = 1D72FEAA23864A8D000FDF7B /* CMS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -568,7 +568,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DilzanaKeise.Course-System-Manager";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CMS;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -587,7 +587,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DilzanaKeise.Course-System-Manager";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CMS;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
