@@ -32,6 +32,6 @@ São recursos que o app utiliza como:
 * Imagens
 * Sons
 * Asset
-*Icones
+* Icones
 * Fontes 
 etc.
