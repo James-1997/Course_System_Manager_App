@@ -3,25 +3,79 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4F3CFC2389C5D700848ED2 /* GeneralStyleKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3CFB2389C5D700848ED2 /* GeneralStyleKit.swift */; };
+		1D4F3CFF2389C69C00848ED2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3CFE2389C69C00848ED2 /* UIColor.swift */; };
+		1D4F3D042389D26C00848ED2 /* StudentLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D032389D26C00848ED2 /* StudentLoginViewController.swift */; };
+		1D4F3D062389D28000848ED2 /* TeacherLoginViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D052389D28000848ED2 /* TeacherLoginViewControler.swift */; };
+		1D4F3D08238A1BA400848ED2 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D07238A1BA400848ED2 /* TextField.swift */; };
+		1D4F3D0B238A284D00848ED2 /* RestUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D0A238A284D00848ED2 /* RestUtils.swift */; };
+		1D4F3D0D238ACE1A00848ED2 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D0C238ACE1A00848ED2 /* Alerts.swift */; };
+		1D4F3D13238B1A6200848ED2 /* Teacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D12238B1A6200848ED2 /* Teacher.swift */; };
+		1D4F3D15238B1AD800848ED2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D14238B1AD800848ED2 /* Student.swift */; };
+		1D4F3D17238B1C5800848ED2 /* TeacherMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D16238B1C5800848ED2 /* TeacherMenager.swift */; };
+		1D4F3D19238B1D5B00848ED2 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D18238B1D5B00848ED2 /* NotificationName.swift */; };
+		1D4F3D1B238B1DB600848ED2 /* StudentMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D1A238B1DB600848ED2 /* StudentMenager.swift */; };
+		1D7172EC238B7FAB008CDD17 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172E1238B7FAB008CDD17 /* Lato-BoldItalic.ttf */; };
+		1D7172ED238B7FAB008CDD17 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172E2238B7FAB008CDD17 /* Lato-Regular.ttf */; };
+		1D7172EE238B7FAB008CDD17 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172E3238B7FAB008CDD17 /* Lato-BlackItalic.ttf */; };
+		1D7172EF238B7FAB008CDD17 /* Lato-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172E4238B7FAB008CDD17 /* Lato-Thin.ttf */; };
+		1D7172F0238B7FAB008CDD17 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172E5238B7FAB008CDD17 /* Lato-Light.ttf */; };
+		1D7172F1238B7FAB008CDD17 /* Lato-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172E6238B7FAB008CDD17 /* Lato-Black.ttf */; };
+		1D7172F2238B7FAB008CDD17 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172E7238B7FAB008CDD17 /* Lato-Bold.ttf */; };
+		1D7172F3238B7FAB008CDD17 /* BreeSerif-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172E8238B7FAB008CDD17 /* BreeSerif-Regular.ttf */; };
+		1D7172F4238B7FAB008CDD17 /* Lato-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172E9238B7FAB008CDD17 /* Lato-LightItalic.ttf */; };
+		1D7172F5238B7FAB008CDD17 /* Lato-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172EA238B7FAB008CDD17 /* Lato-RegularItalic.ttf */; };
+		1D7172F6238B7FAB008CDD17 /* Lato-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172EB238B7FAB008CDD17 /* Lato-ThinItalic.ttf */; };
 		1D72FEAE23864A8D000FDF7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72FEAD23864A8D000FDF7B /* AppDelegate.swift */; };
 		1D72FEB023864A8D000FDF7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72FEAF23864A8D000FDF7B /* SceneDelegate.swift */; };
-		1D72FEB223864A8D000FDF7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72FEB123864A8D000FDF7B /* ViewController.swift */; };
+		1D72FEB223864A8D000FDF7B /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D72FEB123864A8D000FDF7B /* RootViewController.swift */; };
 		1D72FEB823864A8D000FDF7B /* Course_System_Manager.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D72FEB623864A8D000FDF7B /* Course_System_Manager.xcdatamodeld */; };
 		1D72FEBA23864A8E000FDF7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D72FEB923864A8E000FDF7B /* Assets.xcassets */; };
+		1D919089238652AB0071DFF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D919088238652AB0071DFF2 /* Main.storyboard */; };
+		1DC873852392BBB60053B343 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC873842392BBB60053B343 /* Spinner.swift */; };
+		D7C430D8A3F09BF595F9A9DA /* Pods_Course_System_Manager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43E180BE5A398A5DE577E030 /* Pods_Course_System_Manager.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A48CCA98618A88A1CD9FAD0 /* Pods-Course System Manager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Course System Manager.release.xcconfig"; path = "Target Support Files/Pods-Course System Manager/Pods-Course System Manager.release.xcconfig"; sourceTree = "<group>"; };
+		1D4F3CFB2389C5D700848ED2 /* GeneralStyleKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralStyleKit.swift; sourceTree = "<group>"; };
+		1D4F3CFE2389C69C00848ED2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		1D4F3D032389D26C00848ED2 /* StudentLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLoginViewController.swift; sourceTree = "<group>"; };
+		1D4F3D052389D28000848ED2 /* TeacherLoginViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherLoginViewControler.swift; sourceTree = "<group>"; };
+		1D4F3D07238A1BA400848ED2 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		1D4F3D0A238A284D00848ED2 /* RestUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestUtils.swift; sourceTree = "<group>"; };
+		1D4F3D0C238ACE1A00848ED2 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		1D4F3D12238B1A6200848ED2 /* Teacher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teacher.swift; sourceTree = "<group>"; };
+		1D4F3D14238B1AD800848ED2 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		1D4F3D16238B1C5800848ED2 /* TeacherMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherMenager.swift; sourceTree = "<group>"; };
+		1D4F3D18238B1D5B00848ED2 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
+		1D4F3D1A238B1DB600848ED2 /* StudentMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMenager.swift; sourceTree = "<group>"; };
+		1D7172E1238B7FAB008CDD17 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
+		1D7172E2238B7FAB008CDD17 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		1D7172E3238B7FAB008CDD17 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
+		1D7172E4238B7FAB008CDD17 /* Lato-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Thin.ttf"; sourceTree = "<group>"; };
+		1D7172E5238B7FAB008CDD17 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
+		1D7172E6238B7FAB008CDD17 /* Lato-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Black.ttf"; sourceTree = "<group>"; };
+		1D7172E7238B7FAB008CDD17 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
+		1D7172E8238B7FAB008CDD17 /* BreeSerif-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BreeSerif-Regular.ttf"; sourceTree = "<group>"; };
+		1D7172E9238B7FAB008CDD17 /* Lato-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-LightItalic.ttf"; sourceTree = "<group>"; };
+		1D7172EA238B7FAB008CDD17 /* Lato-RegularItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-RegularItalic.ttf"; sourceTree = "<group>"; };
+		1D7172EB238B7FAB008CDD17 /* Lato-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-ThinItalic.ttf"; sourceTree = "<group>"; };
 		1D72FEAA23864A8D000FDF7B /* Course System Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Course System Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D72FEAD23864A8D000FDF7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D72FEAF23864A8D000FDF7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1D72FEB123864A8D000FDF7B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1D72FEB123864A8D000FDF7B /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		1D72FEB723864A8D000FDF7B /* Course_System_Manager.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Course_System_Manager.xcdatamodel; sourceTree = "<group>"; };
 		1D72FEB923864A8E000FDF7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1D72FEBE23864A8E000FDF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D919088238652AB0071DFF2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		1DC873842392BBB60053B343 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		2F6AAEF198E09F678D115B21 /* Pods-Course System Manager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Course System Manager.debug.xcconfig"; path = "Target Support Files/Pods-Course System Manager/Pods-Course System Manager.debug.xcconfig"; sourceTree = "<group>"; };
+		43E180BE5A398A5DE577E030 /* Pods_Course_System_Manager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Course_System_Manager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +83,117 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7C430D8A3F09BF595F9A9DA /* Pods_Course_System_Manager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D4F3CFD2389C68B00848ED2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1D4F3CFE2389C69C00848ED2 /* UIColor.swift */,
+				1D4F3D07238A1BA400848ED2 /* TextField.swift */,
+				1D4F3D0C238ACE1A00848ED2 /* Alerts.swift */,
+				1D4F3D18238B1D5B00848ED2 /* NotificationName.swift */,
+				1DC873842392BBB60053B343 /* Spinner.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1D4F3D002389C72A00848ED2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				1D4F3CFB2389C5D700848ED2 /* GeneralStyleKit.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		1D4F3D012389C73A00848ED2 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				1D72FEAD23864A8D000FDF7B /* AppDelegate.swift */,
+				1D72FEAF23864A8D000FDF7B /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		1D4F3D022389C74400848ED2 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1D72FEB123864A8D000FDF7B /* RootViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		1D4F3D09238A283800848ED2 /* CloudServices */ = {
+			isa = PBXGroup;
+			children = (
+				1D4F3D0A238A284D00848ED2 /* RestUtils.swift */,
+			);
+			name = CloudServices;
+			sourceTree = "<group>";
+		};
+		1D4F3D0E238B1A1B00848ED2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D4F3D052389D28000848ED2 /* TeacherLoginViewControler.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1D4F3D0F238B1A2500848ED2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1D4F3D032389D26C00848ED2 /* StudentLoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1D4F3D10238B1A2E00848ED2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D4F3D12238B1A6200848ED2 /* Teacher.swift */,
+				1D4F3D16238B1C5800848ED2 /* TeacherMenager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D4F3D11238B1A3400848ED2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1D4F3D14238B1AD800848ED2 /* Student.swift */,
+				1D4F3D1A238B1DB600848ED2 /* StudentMenager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1D7172F7238B7FB1008CDD17 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1D7172E8238B7FAB008CDD17 /* BreeSerif-Regular.ttf */,
+				1D7172E6238B7FAB008CDD17 /* Lato-Black.ttf */,
+				1D7172E3238B7FAB008CDD17 /* Lato-BlackItalic.ttf */,
+				1D7172E7238B7FAB008CDD17 /* Lato-Bold.ttf */,
+				1D7172E1238B7FAB008CDD17 /* Lato-BoldItalic.ttf */,
+				1D7172E5238B7FAB008CDD17 /* Lato-Light.ttf */,
+				1D7172E9238B7FAB008CDD17 /* Lato-LightItalic.ttf */,
+				1D7172E2238B7FAB008CDD17 /* Lato-Regular.ttf */,
+				1D7172EA238B7FAB008CDD17 /* Lato-RegularItalic.ttf */,
+				1D7172E4238B7FAB008CDD17 /* Lato-Thin.ttf */,
+				1D7172EB238B7FAB008CDD17 /* Lato-ThinItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		1D72FEA123864A8C000FDF7B = {
 			isa = PBXGroup;
 			children = (
 				1D72FEAC23864A8D000FDF7B /* Course System Manager */,
 				1D72FEAB23864A8D000FDF7B /* Products */,
+				D19B232EE24DBD287E8413CF /* Pods */,
+				C554E389D926BAD5715E0F3A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +221,8 @@
 		1D72FEC423864B2C000FDF7B /* Student */ = {
 			isa = PBXGroup;
 			children = (
+				1D4F3D11238B1A3400848ED2 /* Model */,
+				1D4F3D0F238B1A2500848ED2 /* Controller */,
 			);
 			path = Student;
 			sourceTree = "<group>";
@@ -74,6 +230,8 @@
 		1D72FEC523864B39000FDF7B /* Teacher */ = {
 			isa = PBXGroup;
 			children = (
+				1D4F3D10238B1A2E00848ED2 /* Model */,
+				1D4F3D0E238B1A1B00848ED2 /* Controller */,
 			);
 			path = Teacher;
 			sourceTree = "<group>";
@@ -81,9 +239,11 @@
 		1D72FEC623864B73000FDF7B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				1D72FEB123864A8D000FDF7B /* ViewController.swift */,
-				1D72FEAD23864A8D000FDF7B /* AppDelegate.swift */,
-				1D72FEAF23864A8D000FDF7B /* SceneDelegate.swift */,
+				1D4F3D09238A283800848ED2 /* CloudServices */,
+				1D4F3D022389C74400848ED2 /* Controllers */,
+				1D4F3D012389C73A00848ED2 /* Delegates */,
+				1D4F3D002389C72A00848ED2 /* UI */,
+				1D4F3CFD2389C68B00848ED2 /* Extensions */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -91,9 +251,28 @@
 		1D72FEC723864B94000FDF7B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1D7172F7238B7FB1008CDD17 /* Fonts */,
 				1D72FEB923864A8E000FDF7B /* Assets.xcassets */,
+				1D919088238652AB0071DFF2 /* Main.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C554E389D926BAD5715E0F3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43E180BE5A398A5DE577E030 /* Pods_Course_System_Manager.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D19B232EE24DBD287E8413CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2F6AAEF198E09F678D115B21 /* Pods-Course System Manager.debug.xcconfig */,
+				0A48CCA98618A88A1CD9FAD0 /* Pods-Course System Manager.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,9 +282,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1D72FEC123864A8E000FDF7B /* Build configuration list for PBXNativeTarget "Course System Manager" */;
 			buildPhases = (
+				64E1728CC75E7146B7D0BA63 /* [CP] Check Pods Manifest.lock */,
 				1D72FEA623864A8D000FDF7B /* Sources */,
 				1D72FEA723864A8D000FDF7B /* Frameworks */,
 				1D72FEA823864A8D000FDF7B /* Resources */,
+				398B120B49DA858876E87A4D /* [CP] Embed Pods Frameworks */,
+				1DEED53E238656C200DD2221 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -154,21 +336,105 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D7172F4238B7FAB008CDD17 /* Lato-LightItalic.ttf in Resources */,
+				1D7172EC238B7FAB008CDD17 /* Lato-BoldItalic.ttf in Resources */,
+				1D7172EF238B7FAB008CDD17 /* Lato-Thin.ttf in Resources */,
+				1D7172F5238B7FAB008CDD17 /* Lato-RegularItalic.ttf in Resources */,
 				1D72FEBA23864A8E000FDF7B /* Assets.xcassets in Resources */,
+				1D7172F3238B7FAB008CDD17 /* BreeSerif-Regular.ttf in Resources */,
+				1D7172EE238B7FAB008CDD17 /* Lato-BlackItalic.ttf in Resources */,
+				1D7172F1238B7FAB008CDD17 /* Lato-Black.ttf in Resources */,
+				1D919089238652AB0071DFF2 /* Main.storyboard in Resources */,
+				1D7172ED238B7FAB008CDD17 /* Lato-Regular.ttf in Resources */,
+				1D7172F2238B7FAB008CDD17 /* Lato-Bold.ttf in Resources */,
+				1D7172F6238B7FAB008CDD17 /* Lato-ThinItalic.ttf in Resources */,
+				1D7172F0238B7FAB008CDD17 /* Lato-Light.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1DEED53E238656C200DD2221 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: Swiftlint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+		398B120B49DA858876E87A4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Course System Manager/Pods-Course System Manager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Course System Manager/Pods-Course System Manager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Course System Manager/Pods-Course System Manager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		64E1728CC75E7146B7D0BA63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Course System Manager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D72FEA623864A8D000FDF7B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1D72FEB223864A8D000FDF7B /* ViewController.swift in Sources */,
+				1D4F3D13238B1A6200848ED2 /* Teacher.swift in Sources */,
+				1D72FEB223864A8D000FDF7B /* RootViewController.swift in Sources */,
+				1D4F3CFF2389C69C00848ED2 /* UIColor.swift in Sources */,
+				1D4F3D062389D28000848ED2 /* TeacherLoginViewControler.swift in Sources */,
+				1D4F3D0B238A284D00848ED2 /* RestUtils.swift in Sources */,
+				1D4F3D1B238B1DB600848ED2 /* StudentMenager.swift in Sources */,
 				1D72FEB823864A8D000FDF7B /* Course_System_Manager.xcdatamodeld in Sources */,
 				1D72FEAE23864A8D000FDF7B /* AppDelegate.swift in Sources */,
+				1D4F3D15238B1AD800848ED2 /* Student.swift in Sources */,
+				1D4F3D042389D26C00848ED2 /* StudentLoginViewController.swift in Sources */,
+				1D4F3D08238A1BA400848ED2 /* TextField.swift in Sources */,
+				1D4F3D17238B1C5800848ED2 /* TeacherMenager.swift in Sources */,
 				1D72FEB023864A8D000FDF7B /* SceneDelegate.swift in Sources */,
+				1D4F3D0D238ACE1A00848ED2 /* Alerts.swift in Sources */,
+				1D4F3D19238B1D5B00848ED2 /* NotificationName.swift in Sources */,
+				1D4F3CFC2389C5D700848ED2 /* GeneralStyleKit.swift in Sources */,
+				1DC873852392BBB60053B343 /* Spinner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +557,7 @@
 		};
 		1D72FEC223864A8E000FDF7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F6AAEF198E09F678D115B21 /* Pods-Course System Manager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -309,6 +576,7 @@
 		};
 		1D72FEC323864A8E000FDF7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A48CCA98618A88A1CD9FAD0 /* Pods-Course System Manager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
