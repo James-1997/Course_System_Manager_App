@@ -9,26 +9,21 @@
 import UIKit
 import Stevia
 
-class StudentLoginViewControler: UIViewController {
+class StudentLoginViewControler: UIViewController { //Controller na qual administra as ações do app
+    //Abaixo os elementos de UI
     private let emailTextField = UITextField()
     private let passWordTextField = UITextField()
     private let brandImageLogo = UIImageView()
     private let logInButton = UIButton(type: .system)
     private var studentMenager = StudentManager.shared
     private let spinner = SpinnerViewController.shared
+    //viewDidLoad() - Função que carrega a tela
     override func viewDidLoad() {
         super.viewDidLoad()
-        commonInit()
-        addObservers()
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShow),
-                                               name: UIResponder.keyboardWillShowNotification,
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHide),
-                                               name: UIResponder.keyboardWillHideNotification,
-                                               object: nil)
+        commonInit() //iniciador de configurações da tela
+        addObservers() //observadores de feedbacks
     }
+    //abaixo funções de teclado
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey]
             as? NSValue)?.cgRectValue {
@@ -43,16 +38,18 @@ class StudentLoginViewControler: UIViewController {
         }
     }
     private func commonInit() {
-        subviews()
-        layout()
-        theme()
+        subviews() //hierarquia
+        layout() //regras de posições
+        theme() //customizações
     }
+    //configurações de hierarquia
     private func subviews() {
         view.sv(brandImageLogo)
         view.sv(emailTextField)
         view.sv(passWordTextField)
         view.sv(logInButton)
     }
+    //Configurações de posições
     private func layout() {
         brandImageLogo.centerHorizontally()
         brandImageLogo.Top == view.safeAreaLayoutGuide.Top + GeneralSK.Sizes.brandMarginToTop
@@ -72,6 +69,7 @@ class StudentLoginViewControler: UIViewController {
         logInButton.fillHorizontally(m: GeneralSK.Sizes.buttonMargin)
         logInButton.Height == GeneralSK.Sizes.buttonHeight
     }
+    //Configurações de customização
     private func theme() {
         view.backgroundColor = GeneralSK.Colors.backGroundLoginColor
         emailTextField.textAlignment = .left
@@ -118,6 +116,7 @@ class StudentLoginViewControler: UIViewController {
         guard let image = UIImage(named: imageName) else {return nil}
         return image
     }
+    //Configurações de TextField
     private func configureGestures() {
         let tapGestureRecoginzer = UITapGestureRecognizer(target: self,
                                                           action: #selector(viewTapped(gestureRecognizer:)))
@@ -131,6 +130,7 @@ class StudentLoginViewControler: UIViewController {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
     }
+    //Análise dos comportamentos de preenchimento do TextField de login
     @objc func handleLogInToShow () {
         guard let email = emailTextField.text else {
             dontHaveEmailText()
@@ -156,7 +156,7 @@ class StudentLoginViewControler: UIViewController {
         }
         studentMenager.getStudent(email: email, password: password)
         createSpinnerView()
-    }
+    }//mensagens em pop-up
     func dontHaveEmailText() {
         self.showAlert(title: GeneralSK.Texts.dontCompletEmail,
                                   message: GeneralSK.Texts.incompletEmailMessage,
@@ -177,6 +177,14 @@ class StudentLoginViewControler: UIViewController {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(studentErrorLogIn),
                                                name: .studentError,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
                                                object: nil)
     }
     func createSpinnerView() {

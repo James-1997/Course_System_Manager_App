@@ -9,26 +9,22 @@
 import UIKit
 import Stevia
 
-class TeacherLoginViewControler: UIViewController {
+class TeacherLoginViewControler: UIViewController { //Controller na qual administra as ações do app
+    
+    //Abaixo os elementos de UI
     private let emailTextField = UITextField()
     private let passWordTextField = UITextField()
     private let brandImageLogo = UIImageView()
     private let logInButton = UIButton(type: .system)
     private var teacherMenager = TeacherManager.shared
     private let spinner = SpinnerViewController.shared
+    //viewDidLoad() - Função que carrega a tela
     override func viewDidLoad() {
         super.viewDidLoad()
-        commonInit()
-        addObservers()
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShow),
-                                               name: UIResponder.keyboardWillShowNotification,
-                                               object: nil)
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHide),
-                                               name: UIResponder.keyboardWillHideNotification,
-                                               object: nil)
+        commonInit() //iniciador de configurações da tela
+        addObservers() //observadores de feedbacks
     }
+    //abaixo funções de teclado
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey]
             as? NSValue)?.cgRectValue {
@@ -43,16 +39,18 @@ class TeacherLoginViewControler: UIViewController {
         }
     }
     private func commonInit() {
-        subviews()
-        layout()
-        theme()
+        subviews() //hierarquia
+        layout() //regras de posições
+        theme() //customizações
     }
+    //configurações de hierarquia
     private func subviews() {
         view.sv(brandImageLogo)
         view.sv(emailTextField)
         view.sv(passWordTextField)
         view.sv(logInButton)
     }
+    //Configurações de posições
     private func layout() {
         brandImageLogo.centerHorizontally()
         brandImageLogo.Top == view.safeAreaLayoutGuide.Top + GeneralSK.Sizes.brandMarginToTop
@@ -70,6 +68,7 @@ class TeacherLoginViewControler: UIViewController {
         logInButton.fillHorizontally(m: GeneralSK.Sizes.buttonMargin)
         logInButton.Height == GeneralSK.Sizes.buttonHeight
     }
+    //Configurações de customização
     private func theme() {
         view.backgroundColor = GeneralSK.Colors.backGroundLoginColor
         emailTextField.setSystemIcon(GeneralSK.Texts.systemIconNamePerson)
@@ -100,6 +99,7 @@ class TeacherLoginViewControler: UIViewController {
                               action: #selector(handleLogInToShow),
                               for: .touchUpInside)
     }
+    //Configurações de TextField
     func configTextField() {
         let image = searchImage(imageName: GeneralSK.Texts.imageNameLogoBrand)
         brandImageLogo.image = image
@@ -146,6 +146,7 @@ class TeacherLoginViewControler: UIViewController {
         super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
     }
+    //Análise dos comportamentos de preenchimento do TextField de login
     @objc func handleLogInToShow () {
         guard let email = emailTextField.text else {
             dontHaveEmailText()
@@ -172,6 +173,7 @@ class TeacherLoginViewControler: UIViewController {
         teacherMenager.getTeacher(email: email, password: password)
         createSpinnerView()
     }
+    //mensagens em pop-up
     func dontHaveEmailText() {
         self.showAlert(title: GeneralSK.Texts.dontCompletEmail,
                        message: GeneralSK.Texts.incompletEmailMessage,
@@ -193,6 +195,14 @@ class TeacherLoginViewControler: UIViewController {
                                                selector: #selector(teacherErrorLogIn),
                                                name: .teacherError,
         object: nil)
+    NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillShow),
+                                               name: UIResponder.keyboardWillShowNotification,
+                                               object: nil)
+    NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification,
+                                               object: nil)
     }
     @objc func presentTeacherData() {
         destroySpinner()

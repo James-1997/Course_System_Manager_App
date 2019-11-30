@@ -8,7 +8,7 @@
 
 import Foundation
 
-class StudentManager {
+class StudentManager { //Singleton Aluno Gerenciador que controla os requerimentos e dados referente ao objeto primitivo professor
     private static var privateShared: StudentManager?
     private(set) var student: Student?
     class var shared: StudentManager {
@@ -24,7 +24,7 @@ class StudentManager {
     private init() {
         student = nil
     }
-    public func getStudent(email: String, password: String) {
+    public func getStudent(email: String, password: String) { //solicitação da API rest
         RestUtils.getStudent(email: email, password: password, completionHandler: { (student) in
             self.student = nil
             guard student != nil else {

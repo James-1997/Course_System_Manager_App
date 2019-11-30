@@ -19,6 +19,7 @@
 		1D4F3D17238B1C5800848ED2 /* TeacherMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D16238B1C5800848ED2 /* TeacherMenager.swift */; };
 		1D4F3D19238B1D5B00848ED2 /* NotificationName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D18238B1D5B00848ED2 /* NotificationName.swift */; };
 		1D4F3D1B238B1DB600848ED2 /* StudentMenager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4F3D1A238B1DB600848ED2 /* StudentMenager.swift */; };
+		1D6F57D22392E317002DF170 /* Read-me Internal.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1D6F57D12392E317002DF170 /* Read-me Internal.rtf */; };
 		1D7172EC238B7FAB008CDD17 /* Lato-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172E1238B7FAB008CDD17 /* Lato-BoldItalic.ttf */; };
 		1D7172ED238B7FAB008CDD17 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172E2238B7FAB008CDD17 /* Lato-Regular.ttf */; };
 		1D7172EE238B7FAB008CDD17 /* Lato-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1D7172E3238B7FAB008CDD17 /* Lato-BlackItalic.ttf */; };
@@ -54,6 +55,7 @@
 		1D4F3D16238B1C5800848ED2 /* TeacherMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherMenager.swift; sourceTree = "<group>"; };
 		1D4F3D18238B1D5B00848ED2 /* NotificationName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationName.swift; sourceTree = "<group>"; };
 		1D4F3D1A238B1DB600848ED2 /* StudentMenager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentMenager.swift; sourceTree = "<group>"; };
+		1D6F57D12392E317002DF170 /* Read-me Internal.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Read-me Internal.rtf"; sourceTree = "<group>"; };
 		1D7172E1238B7FAB008CDD17 /* Lato-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BoldItalic.ttf"; sourceTree = "<group>"; };
 		1D7172E2238B7FAB008CDD17 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		1D7172E3238B7FAB008CDD17 /* Lato-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 		1D72FEA123864A8C000FDF7B = {
 			isa = PBXGroup;
 			children = (
+				1D6F57D12392E317002DF170 /* Read-me Internal.rtf */,
 				1D72FEAC23864A8D000FDF7B /* Course System Manager */,
 				1D72FEAB23864A8D000FDF7B /* Products */,
 				D19B232EE24DBD287E8413CF /* Pods */,
@@ -346,6 +349,7 @@
 				1D7172F1238B7FAB008CDD17 /* Lato-Black.ttf in Resources */,
 				1D919089238652AB0071DFF2 /* Main.storyboard in Resources */,
 				1D7172ED238B7FAB008CDD17 /* Lato-Regular.ttf in Resources */,
+				1D6F57D22392E317002DF170 /* Read-me Internal.rtf in Resources */,
 				1D7172F2238B7FAB008CDD17 /* Lato-Bold.ttf in Resources */,
 				1D7172F6238B7FAB008CDD17 /* Lato-ThinItalic.ttf in Resources */,
 				1D7172F0238B7FAB008CDD17 /* Lato-Light.ttf in Resources */,
@@ -570,7 +574,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DilzanaKeise.Course-System-Manager";
 				PRODUCT_NAME = CMS;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -589,7 +593,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.DilzanaKeise.Course-System-Manager";
 				PRODUCT_NAME = CMS;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

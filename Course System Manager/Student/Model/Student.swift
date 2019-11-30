@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Student: Decodable {
+class Student: Decodable { //Objeto aluno e seus atributos e função init instanciadore
     public let email: String
     public let password: String
     public let active: Bool
