@@ -99,6 +99,8 @@ class TeacherLoginViewControler: UIViewController {
         logInButton.addTarget(self,
                               action: #selector(handleLogInToShow),
                               for: .touchUpInside)
+    }
+    func configTextField() {
         let image = searchImage(imageName: GeneralSK.Texts.imageNameLogoBrand)
         brandImageLogo.image = image
         passWordTextField.attributedPlaceholder =
@@ -130,7 +132,7 @@ class TeacherLoginViewControler: UIViewController {
         spinner.didMove(toParent: self)
     }
     func destroySpinner () {
-        DispatchQueue.main.async ( ) {
+        DispatchQueue.main.async {
             self.spinner.willMove(toParent: nil)
             self.spinner.view.removeFromSuperview()
             self.spinner.removeFromParent()
@@ -153,7 +155,7 @@ class TeacherLoginViewControler: UIViewController {
             dontHaveEmailText()
             return
         }
-        if email.count > 30 || email.count < 8{
+        if email.count > 30 || email.count < 8 {
             characterUnlimite()
         }
         guard let password = passWordTextField.text else {
@@ -164,7 +166,7 @@ class TeacherLoginViewControler: UIViewController {
             dontHavePasswordText()
             return
         }
-        if password.count > 30 || password.count < 8{
+        if password.count > 30 || password.count < 8 {
             characterUnlimite()
         }
         teacherMenager.getTeacher(email: email, password: password)

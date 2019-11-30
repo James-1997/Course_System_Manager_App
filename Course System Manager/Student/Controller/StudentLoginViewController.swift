@@ -186,7 +186,7 @@ class StudentLoginViewControler: UIViewController {
         spinner.didMove(toParent: self)
     }
     func destroySpinner () {
-        DispatchQueue.main.async() {
+        DispatchQueue.main.async {
             self.spinner.willMove(toParent: nil)
             self.spinner.view.removeFromSuperview()
             self.spinner.removeFromParent()

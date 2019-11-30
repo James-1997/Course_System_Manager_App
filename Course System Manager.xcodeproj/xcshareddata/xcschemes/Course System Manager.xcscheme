@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1D72FEA923864A8D000FDF7B"
-               BuildableName = "Course System Manager.app"
+               BuildableName = "CMS.app"
                BlueprintName = "Course System Manager"
                ReferencedContainer = "container:Course System Manager.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D72FEA923864A8D000FDF7B"
-            BuildableName = "Course System Manager.app"
+            BuildableName = "CMS.app"
             BlueprintName = "Course System Manager"
             ReferencedContainer = "container:Course System Manager.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D72FEA923864A8D000FDF7B"
-            BuildableName = "Course System Manager.app"
+            BuildableName = "CMS.app"
             BlueprintName = "Course System Manager"
             ReferencedContainer = "container:Course System Manager.xcodeproj">
          </BuildableReference>
