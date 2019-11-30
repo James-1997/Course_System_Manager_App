@@ -10,7 +10,6 @@ import UIKit
 import Stevia
 
 class TeacherLoginViewControler: UIViewController { //Controller na qual administra as ações do app
-    
     //Abaixo os elementos de UI
     private let emailTextField = UITextField()
     private let passWordTextField = UITextField()
@@ -98,6 +97,7 @@ class TeacherLoginViewControler: UIViewController { //Controller na qual adminis
         logInButton.addTarget(self,
                               action: #selector(handleLogInToShow),
                               for: .touchUpInside)
+        configTextField()
     }
     //Configurações de TextField
     func configTextField() {
@@ -148,6 +148,8 @@ class TeacherLoginViewControler: UIViewController { //Controller na qual adminis
     }
     //Análise dos comportamentos de preenchimento do TextField de login
     @objc func handleLogInToShow () {
+        emailTextField.resignFirstResponder()
+        passWordTextField.resignFirstResponder()
         guard let email = emailTextField.text else {
             dontHaveEmailText()
             return
@@ -158,6 +160,11 @@ class TeacherLoginViewControler: UIViewController { //Controller na qual adminis
         }
         if email.count > 30 || email.count < 8 {
             characterUnlimite()
+            return
+        }
+        if !(email.contains("@") && email.numberOfOccurrences("@") == 1) {
+            emailDenied()
+            return
         }
         guard let password = passWordTextField.text else {
             dontHavePasswordText()
@@ -169,6 +176,7 @@ class TeacherLoginViewControler: UIViewController { //Controller na qual adminis
         }
         if password.count > 30 || password.count < 8 {
             characterUnlimite()
+            return
         }
         teacherMenager.getTeacher(email: email, password: password)
         createSpinnerView()
@@ -234,6 +242,12 @@ class TeacherLoginViewControler: UIViewController { //Controller na qual adminis
     func characterUnlimite() {
         self.showAlert(title: GeneralSK.Texts.characterTitle,
                        message: GeneralSK.Texts.characterMessage,
+                       buttonTitle: GeneralSK.Texts.confirmButtonText,
+                       style: .default)
+    }
+    func emailDenied() {
+        self.showAlert(title:  GeneralSK.Texts.incorrectEmail,
+                       message: GeneralSK.Texts.incorrectEmailMessage,
                        buttonTitle: GeneralSK.Texts.confirmButtonText,
                        style: .default)
     }

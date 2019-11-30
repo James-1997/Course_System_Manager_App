@@ -132,6 +132,8 @@ class StudentLoginViewControler: UIViewController { //Controller na qual adminis
     }
     //Análise dos comportamentos de preenchimento do TextField de login
     @objc func handleLogInToShow () {
+        emailTextField.resignFirstResponder()
+        passWordTextField.resignFirstResponder()
         guard let email = emailTextField.text else {
             dontHaveEmailText()
             return
@@ -142,6 +144,11 @@ class StudentLoginViewControler: UIViewController { //Controller na qual adminis
         }
         if email.count > 30 || email.count < 8 {
             characterUnlimite()
+            return
+        }
+        if !(email.contains("@") && email.numberOfOccurrences("@") == 1) {
+            emailDenied()
+            return
         }
         guard let password = passWordTextField.text else {
             dontHavePasswordText()
@@ -153,6 +160,7 @@ class StudentLoginViewControler: UIViewController { //Controller na qual adminis
         }
         if password.count > 30 || password.count < 8 {
             characterUnlimite()
+            return
         }
         studentMenager.getStudent(email: email, password: password)
         createSpinnerView()
@@ -230,6 +238,12 @@ class StudentLoginViewControler: UIViewController { //Controller na qual adminis
     func characterUnlimite() {
         self.showAlert(title: GeneralSK.Texts.characterTitle,
                        message: GeneralSK.Texts.characterMessage,
+                       buttonTitle: GeneralSK.Texts.confirmButtonText,
+                       style: .default)
+    }
+    func emailDenied() {
+        self.showAlert(title:  GeneralSK.Texts.incorrectEmail,
+                       message: GeneralSK.Texts.incorrectEmailMessage,
                        buttonTitle: GeneralSK.Texts.confirmButtonText,
                        style: .default)
     }

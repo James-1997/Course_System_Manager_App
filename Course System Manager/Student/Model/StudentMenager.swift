@@ -8,7 +8,8 @@
 
 import Foundation
 
-class StudentManager { //Singleton Aluno Gerenciador que controla os requerimentos e dados referente ao objeto primitivo professor
+class StudentManager {
+    //Singleton Aluno Gerenciador que controla os requerimentos referente ao objeto primitivo
     private static var privateShared: StudentManager?
     private(set) var student: Student?
     class var shared: StudentManager {
