@@ -33,7 +33,6 @@ struct GeneralSK {
         static let spacingBettwenTFandBt: CGFloat = 56
         static let infoLabelLeftMargin: CGFloat = 50
         static let infoLabelTopDistance: CGFloat = 16
-
     }
     struct Texts {
         static let titleToActionText: String = "Selecione seu perfil:"
@@ -51,18 +50,23 @@ struct GeneralSK {
         static let tryAgain: String = "Tente Novamente!"
         static let errorTitle: String = "ERROR"
         static let logInSuccededTitle: String = "Login Feito"
-        static let templateMessageSuccedLogin: String = "Login Realizado: \n Email: %@ \n senha: %@"
+        static let templateMessageSuccedLogin: String = "Login Realizado com sucesso"
         static let dontCompletEmail: String = "Erro no preenchimento de campos"
         static let dontCompletPassword: String = "Erro no preenchimento de campos"
         static let incompletPasswordMessage: String = "O campo Senha é obrigatório!"
         static let incompletEmailMessage: String = "O campo Email é obrigatório!"
         static let infoLabelText: String = "Selecione o seu perfil:"
-        static let errorLoginTitle: String = "Erro no Login"
-        static let errorLoginMessage: String = "Erro no seu login! \n Reveja os dados e sua conexão internet!"
-        static let characterTitle: String = " Erro no preenchimento de campos"
-        static let characterMessage: String = "O campo não pode ter menos de 8 ou mais do que 30 caracteres!"
+        static let errorLoginTitle: String = "Resultado não encontrado"
+        static let errorLoginMessage: String = "Nenhum registro encontrado!"
+        static let characterTitle: String = "Erro no preenchimento de campos"
+        static let characterPasswordBMessage: String = "O campo senha não pode ter mais de 30 caracteres!"
+        static let characterPasswordSMessage: String = "O campo senha não pode ter menos de 8 caracteres!"
+        static let characterEmailBMessage: String = "O campo email não pode ter mais de 30 caracteres!"
+        static let characterEmailSMessage: String = "O campo email não pode ter menos de 8 caracteres!"
         static let incorrectEmail: String = "O campo Email não é um endereço de email válido!"
+        static let incorrectPassword: String = "O campo de preenchimento está incorreto!"
          static let incorrectEmailMessage: String = "O campo Email não é um endereço de email válido"
+        static let dontCanSpaceInpassword: String = "A senha não pode conter espaço"
     }
     struct Font {
         static let generalSubtitle = UIFont(name: "Lato-Bold", size: 24)

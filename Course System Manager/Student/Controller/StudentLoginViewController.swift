@@ -142,11 +142,15 @@ class StudentLoginViewControler: UIViewController { //Controller na qual adminis
             dontHaveEmailText()
             return
         }
-        if email.count > 30 || email.count < 8 {
-            characterUnlimite()
+        if email.count > 30 {
+            characterUnlimite(numberCode: 1)
             return
         }
-        if !(email.contains("@") && email.numberOfOccurrences("@") == 1) {
+        if email.count < 8 {
+            characterUnlimite(numberCode: 2)
+            return
+        }
+        if !(email.contains("@") && email.numberOfOccurrences("@") == 1) || (email.contains(" ")) {
             emailDenied()
             return
         }
@@ -158,8 +162,16 @@ class StudentLoginViewControler: UIViewController { //Controller na qual adminis
             dontHavePasswordText()
             return
         }
-        if password.count > 30 || password.count < 8 {
-            characterUnlimite()
+        if password.contains(" ") {
+            passwordDenied()
+            return
+        }
+        if password.count > 30 {
+            characterUnlimite(numberCode: 3)
+            return
+        }
+        if password.count < 8 {
+            characterUnlimite(numberCode: 4)
             return
         }
         studentMenager.getStudent(email: email, password: password)
@@ -210,7 +222,7 @@ class StudentLoginViewControler: UIViewController { //Controller na qual adminis
     }
     @objc func presentStudentData() {
         destroySpinner()
-        guard let student = studentMenager.student else {
+        guard studentMenager.student != nil else {
             self.showAlert(title: GeneralSK.Texts.errorTitle,
                            message: GeneralSK.Texts.errorTryAgainTitleText,
                            buttonTitle: GeneralSK.Texts.confirmButtonText,
@@ -219,9 +231,7 @@ class StudentLoginViewControler: UIViewController { //Controller na qual adminis
         }
         DispatchQueue.main.async {
             self.showAlert(title: GeneralSK.Texts.logInSuccededTitle,
-                           message: String(format: GeneralSK.Texts.templateMessageSuccedLogin,
-                                           student.email,
-                                           student.password),
+                           message: GeneralSK.Texts.templateMessageSuccedLogin,
                            buttonTitle: GeneralSK.Texts.confirmButtonText,
                            style: .default)
         }
@@ -235,15 +245,38 @@ class StudentLoginViewControler: UIViewController { //Controller na qual adminis
                            style: .default)
         }
     }
-    func characterUnlimite() {
-        self.showAlert(title: GeneralSK.Texts.characterTitle,
-                       message: GeneralSK.Texts.characterMessage,
-                       buttonTitle: GeneralSK.Texts.confirmButtonText,
-                       style: .default)
+    func characterUnlimite(numberCode: Int) {
+        if numberCode == 1 {
+            self.showAlert(title: GeneralSK.Texts.characterTitle,
+                           message: GeneralSK.Texts.characterEmailBMessage,
+                           buttonTitle: GeneralSK.Texts.confirmButtonText,
+                           style: .default)
+        } else if numberCode == 2 {
+            self.showAlert(title: GeneralSK.Texts.characterTitle,
+                           message: GeneralSK.Texts.characterEmailSMessage,
+                           buttonTitle: GeneralSK.Texts.confirmButtonText,
+                           style: .default)
+        } else if numberCode == 3 {
+            self.showAlert(title: GeneralSK.Texts.characterTitle,
+                           message: GeneralSK.Texts.characterPasswordBMessage,
+                           buttonTitle: GeneralSK.Texts.confirmButtonText,
+                           style: .default)
+        } else if numberCode == 4 {
+            self.showAlert(title: GeneralSK.Texts.characterTitle,
+                           message: GeneralSK.Texts.characterPasswordSMessage,
+                           buttonTitle: GeneralSK.Texts.confirmButtonText,
+                           style: .default)
+        }
     }
     func emailDenied() {
         self.showAlert(title:  GeneralSK.Texts.incorrectEmail,
                        message: GeneralSK.Texts.incorrectEmailMessage,
+                       buttonTitle: GeneralSK.Texts.confirmButtonText,
+                       style: .default)
+    }
+    func passwordDenied() {
+        self.showAlert(title:  GeneralSK.Texts.incorrectPassword,
+                       message: GeneralSK.Texts.dontCanSpaceInpassword,
                        buttonTitle: GeneralSK.Texts.confirmButtonText,
                        style: .default)
     }
